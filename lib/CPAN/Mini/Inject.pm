@@ -283,9 +283,9 @@ sub add {
   croak "Required option not specified: $optionchk" if $optionchk;
   croak "No repository configured"
    unless ( $self->config->get( 'repository' ) );
-  croak "Can not write to repository: "
-   . $self->config->get( 'repository' )
-   unless ( -w $self->config->get( 'repository' ) );
+  #croak "Can not write to repository: "
+  # . $self->config->get( 'repository' )
+  # unless ( -w $self->config->get( 'repository' ) );
 
   croak "Can not read module file: $options{file}"
    unless -r $options{file};
